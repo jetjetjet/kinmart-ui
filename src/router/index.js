@@ -114,6 +114,9 @@ const TermsOfUse = () =>import('@/views/backend/Pages/Extrapages/TermsOfUse')
 
 //BATAS SUCI
 const JabatanLists = () => import('@/views/backend/MasterJabatan/Lists')
+const SuppliersLists = () => import('@/views/backend/MasterSuppliers/Lists')
+const KategoriBarangLists = () => import('@/views/backend/MasterKategoriBarang/Lists')
+
 
 
 Vue.use(VueRouter)
@@ -130,6 +133,18 @@ const childRoute = () => [
     name: 'Master.jabatan',
     meta: { name : 'Master Jabatan', requiresAuth: true},
     component: JabatanLists
+  },
+  {
+    path: 'master-suppliers',
+    name: 'Master.suppliers',
+    meta: { name : 'Master Suppliers', requiresAuth: true},
+    component: SuppliersLists
+  },
+  {
+    path: 'master-kb',
+    name: 'Master.kb',
+    meta: { name : 'Master Kategori Barang', requiresAuth: true},
+    component: KategoriBarangLists
   },
   {
     path: 'ui-avatars',

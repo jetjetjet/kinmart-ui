@@ -115,7 +115,9 @@ const TermsOfUse = () =>import('@/views/backend/Pages/Extrapages/TermsOfUse')
 //BATAS SUCI
 const JabatanLists = () => import('@/views/backend/MasterJabatan/Lists')
 const SuppliersLists = () => import('@/views/backend/MasterSuppliers/Lists')
+const MemberLists = () => import('@/views/backend/MasterMember/Lists')
 const KategoriBarangLists = () => import('@/views/backend/MasterKategoriBarang/Lists')
+
 
 
 
@@ -139,6 +141,12 @@ const childRoute = () => [
     name: 'Master.suppliers',
     meta: { name : 'Master Suppliers', requiresAuth: true},
     component: SuppliersLists
+  },
+  {
+    path: 'master-member',
+    name: 'Master.member',
+    meta: { name : 'Master Member', requiresAuth: true},
+    component: MemberLists
   },
   {
     path: 'master-kb',

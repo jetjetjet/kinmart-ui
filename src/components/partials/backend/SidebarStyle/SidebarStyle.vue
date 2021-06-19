@@ -63,7 +63,7 @@
             <i class="las la-angle-right mm-arrow-right arrow-active"></i> 
             <i class="las la-angle-down mm-arrow-right arrow-hover"></i> 
           </a>
-					<b-collapse @shown="showCollapse('MasterData')" @hide="hideCollapse" tag="ul" id="MasterData" class="submenu" accordion="my-accordion" :visible="checkActive(masterData)">
+					<b-collapse @shown="showCollapse('MasterData')" @hide="hideCollapse" tag="ul" id="MasterData" class="submenu" accordion="my-accordion" :visible="checkActive('masterData')">
 						<li :class="checkActive('Master.jabatan') ? 'active' : ''" >
 							<router-link :to="{ name: 'Master.jabatan'}" class="svg-icon"> 
                 <i class="">
@@ -76,7 +76,7 @@
               </router-link>
 						</li>
 					</b-collapse>
-          <b-collapse @shown="showCollapse('MasterData')" @hide="hideCollapse" tag="ul" id="MasterData" class="submenu" accordion="my-accordion" :visible="checkActive(masterData)">
+          <b-collapse @shown="showCollapse('MasterData')" @hide="hideCollapse" tag="ul" id="MasterData" class="submenu" accordion="my-accordion" :visible="checkActive('masterData')">
 						<li :class="checkActive('Master.kb') ? 'active' : ''" >
 							<router-link :to="{ name: 'Master.kb'}" class="svg-icon"> 
                 <i class="">
@@ -89,7 +89,20 @@
               </router-link>
 						</li>
 					</b-collapse>
-          <b-collapse @shown="showCollapse('MasterData')" @hide="hideCollapse" tag="ul" id="MasterData" class="submenu" accordion="my-accordion" :visible="checkActive(masterData)">
+          <b-collapse @shown="showCollapse('MasterData')" @hide="hideCollapse" tag="ul" id="MasterData" class="submenu" accordion="my-accordion" :visible="checkActive('masterData')">
+            <li :class="checkActive('Master.member') ? 'active' : ''" >
+              <router-link :to="{ name: 'Master.member'}" class="svg-icon"> 
+                <i class="">
+                  <svg class="svg-icon" id="mm-dash-1" width="20" xmlns="http://www.w3.org/2000/svg"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </i> <span>Member</span> 
+              </router-link>
+            </li>
+					</b-collapse>
+          <b-collapse @shown="showCollapse('MasterData')" @hide="hideCollapse" tag="ul" id="MasterData" class="submenu" accordion="my-accordion" :visible="checkActive('masterData')">
 						<li :class="checkActive('Master.suppliers') ? 'active' : ''" >
 							<router-link :to="{ name: 'Master.suppliers'}" class="svg-icon"> 
                 <i class="">
@@ -101,7 +114,7 @@
                 </i> <span>Suppliers</span> 
               </router-link>
 						</li>
-					</b-collapse>
+					</b-collapse>  
 				</li>
 				<li :class="checkActive(pages.concat(app,user)) ? 'active' : ''">
 					<a v-b-toggle.app class="svg-icon"> <i>
